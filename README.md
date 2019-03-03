@@ -93,7 +93,9 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update  
 sudo apt install nvidia-415
 ```  
-the **nvidia-415.27** driver will be installed, test it with `nvidia-smi`, you can see a table if it works. then we reboot.  
+the **nvidia-415.27** driver will be installed, test it with `nvidia-smi`, you can see a table if it works. 
+![nvidia-smi](https://github.com/fyang235/Build-my-deep-learning-platform/blob/master/NVIDIA-smi.png)
+then we reboot.  
 Go to the Ubuntu __Software&updates__ window checkout the __Additional Divers__ tab and make sure you are using the nvidia binary driver-415.27.
 
 
@@ -176,6 +178,7 @@ after installation test it with some cnn program if you get error like
     UnknownError: Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above.     
     [[{{node conv1/convolution}}]]     
     [[{{node mul_49}}]]  
+![error](https://github.com/fyang235/Build-my-deep-learning-platform/blob/master/error.png)
 Add these lines prior your code  
 ```python
 from tensorflow.compat.v1 import ConfigProto  
